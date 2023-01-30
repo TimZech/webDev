@@ -1,0 +1,14 @@
+html{
+    background-color: rgb(161, 211, 112);
+}
+
+input{
+    border-radius: 5px;
+    width: 25%;
+}
+
+button{
+    background-color: yellow;
+    border-radius: 5px;
+}
+
