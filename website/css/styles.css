@@ -33,12 +33,13 @@ header{
     margin-top: 32px;
 
     display: grid;
-    grid-template-columns: 1640px;
+    grid-template-columns: 8% auto 8%;
     justify-content: center;
 }
 
 .eventParentContainer {
     display: grid;
+    grid-column: 2;
     grid-template-columns: 536px 536px 536px;
     gap: 16px;
 
@@ -50,7 +51,7 @@ header{
     width: 536px;
 
     display: grid;
-    grid-template-columns: 268px 268px;
+    grid-template-columns: 50% 50%;
 
     margin: 16px;
     margin-top: -16px;
