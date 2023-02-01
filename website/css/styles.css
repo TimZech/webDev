@@ -8,9 +8,16 @@ header{
 }
 
 .bluebar {
-    margin: auto;
-    position: absolute;
-    align-self: flex-start;
+   margin:auto;
+    position:absolute;
+    align-self:flex-start ;
+     background :#3D6185;
+
+     display: flex;
+     justify-content:flex-end;
+     align-items: flex-end;
+     width: 100%;
+     margin-bottom: 30px;
 }
 
 .headerContainer {
@@ -160,8 +167,8 @@ body {
     margin: 5px;
 }
 
-footer{
-    background: rgb(109, 181, 0);
+.spotlightContainer{
+    background: #63B350;
     text-align: center;
     height: 30px;
 }
