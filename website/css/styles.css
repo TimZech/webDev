@@ -74,14 +74,17 @@ header{
     font-size: 10pt;
 }
 /* Slideshow */
-body{
+
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(32, 32, 32);
 }
-#slider{
+
+#slider {
     overflow: hidden;
 }
+
 #slider figure{
     position: relative;
     width: 500%;
@@ -89,11 +92,12 @@ body{
     left: 0;
     animation: 20s slider infinite;
 }
+
 #slider figure img{
     width: 20%;
     float: left;
-
 }
+
 @keyframes slider {
     0%{
         left:0;
