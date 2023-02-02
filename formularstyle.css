@@ -7,6 +7,11 @@ input{
     width: 25%;
 }
 
+textarea{
+    resize: none;
+
+}
+
 button{
     background-color: yellow;
     border-radius: 5px;

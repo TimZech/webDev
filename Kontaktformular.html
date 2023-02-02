@@ -4,35 +4,27 @@
         <title>Kontaktformular</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="formularstyle.css">
+        <script src="datenempfang.js"></script>
     </head>
 <body>
     <h1>Kontaktformular:</h1>
-    <form>
+    <form id="formular" onsubmit="datenSpeichern(event)">
         <label for="vname">Vorname*:</label><br>
         <input type="text" name="vorname" id="vname" required><br>
 
         <label for="nname">Nachname*:</label><br>
         <input type="text" name="nachname" id="nname" required><br>
 
-        <label for="gbd">Geburtsdatum:</label><br>
-        <input type="date" name="gbdatum" id="gbd"><br>
-
         <label for="email">E-Mail-Adresse*:</label><br>
         <input type="email" name="email" id="email" required><br>
 
-        <label for="nummer">Telefonnummer</label><br>
-        <input type="number" name="nummer" id="nummer"><br>
+        <label for="msg">Nachricht:</label><br>
+        <textarea name="nachricht" id="msg" rows="4" cols="60"></textarea><br>
+        *Pflichtfelder<br>
 
-        <label for="straße">Straße:</label><br>
-        <input type="text" name="straße" id="straße"><br>
 
-        <label>PLZ:</label><br>
-        <input type="number" name="plz"><br>
 
-        <label>Stadt:</label><br>
-        <input type="text" name="stadt"><br>*Pflichtfelder<br>
-
-        <button>Senden</button>
+        <button type="submit" id="send">Senden</button>
     </form>
 </body>
 </html>
