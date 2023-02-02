@@ -283,6 +283,20 @@ footer {
     font-family:"Segoe UI Semibold";
 }
 .pictogramContainer:hover .image{
-    filter: grayscale(50%);
     opacity: 0.3;
 }
+input{
+    border-radius: 5px;
+    width: 25%;
+}
+
+textarea{
+    resize: none;
+
+}
+
+button{
+    background-color: yellow;
+    border-radius: 5px;
+}
+
