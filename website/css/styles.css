@@ -38,11 +38,24 @@ footer {
     background: #3D6185;
     opacity: 80%;
 
+    position: relative;
+
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
+
     width: 100%;
     height: 48px;
+}
+
+.pictogramContainer {
+    position: absolute;
+
+    display: flex;
+    bottom: 10%;
+    right: 5%;
+    gap: 16px;
 }
 
 .logoNavContainer {
@@ -77,6 +90,19 @@ footer {
     text-decoration: none;
     font-size: 20pt;
     color: #707070;
+}
+
+.pageHeadline {
+    height: 64px;
+}
+
+.pageHeadline h1{
+    color: #707070;
+    text-align: center;
+
+    font-family: "Segoe UI Semibold";
+
+    margin-top: 32px;
 }
 
 /* Events */
