@@ -74,7 +74,7 @@ footer {
     left: 5%;
 }
 
-.nav {
+.navContainer {
     grid-column: 2;
 
     display: flex;
@@ -86,7 +86,7 @@ footer {
     gap: 32px;
 }
 
-.nav a {
+.navContainer a {
     text-decoration: none;
     font-size: 20pt;
     color: #707070;
@@ -278,4 +278,11 @@ footer {
     background: #63B350;
     text-align: center;
     height: 30px;
+}
+.navContainer a:hover{
+    font-family:"Segoe UI Semibold";
+}
+.pictogramContainer:hover .image{
+    filter: grayscale(50%);
+    opacity: 0.3;
 }
