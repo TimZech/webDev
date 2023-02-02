@@ -16,9 +16,14 @@ ul {
     margin: 0;
 }
 
-
 header {
+    position: relative;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    height: 200px;
 }
 
 footer {
@@ -27,38 +32,25 @@ footer {
     height: 30px;
 }
 
+/* Classes */
+
 .bluebar {
-    margin: auto;
-    position: absolute;
-    align-self: flex-start;
     background: #3D6185;
+    opacity: 80%;
 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    margin-bottom: 30px;
-}
-
-.spacer {
-    height: 160px;
-}
-
-/* Classes */
-
-.bluebar {
-    background-color: #3D6185;
-    opacity: 80%;
     height: 48px;
-    width: 100%;
 }
 
 .logoNavContainer {
     position: relative;
-
-    display: grid;
     grid-template-columns: 5% auto 5%;
     justify-content: start;
+
+    height: 150px;
     margin: 16px;
 }
 
@@ -72,6 +64,7 @@ footer {
     grid-column: 2;
 
     position: absolute;
+    top: 25%;
     right: 5%;
     gap: 32px;
 }
@@ -147,7 +140,6 @@ footer {
 }
 
 .eventImageLinkContainer a {
-
     font-family: "Segoe UI Semibold";
     text-decoration: none;
     color: #63809D;
@@ -201,6 +193,7 @@ footer {
 
 #slider figure img {
     width: 20%;
+    max-height: 600px;
     float: left;
 
 }

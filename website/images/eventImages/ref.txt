@@ -1,0 +1,5 @@
+team: https://www.pexels.com/de-de/foto/menschen-freunde-lacheln-spenden-6995109/
+ausgabe: https://images.pexels.com/photos/6995201/pexels-photo-6995201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+boxen: https://www.pexels.com/de-de/foto/lebensmittel-hande-menschen-kleidung-6994806/
+homeless: https://www.pexels.com/de-de/foto/lebensmittel-menschen-tisch-gruppe-6646917/
+donation: https://www.pexels.com/de-de/foto/frau-festhalten-inschrift-nachstenliebe-6994983/
