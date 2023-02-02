@@ -6,7 +6,6 @@
 /* Types */
 
 body {
-
     margin: 0;
     background-color: white;
 }
@@ -18,25 +17,27 @@ ul {
 }
 
 
-header{
+header {
     background-color: white;
 }
 
-footer{
+footer {
     background-color: white;
     text-align: center;
     height: 30px;
-.bluebar {
-   margin:auto;
-    position:absolute;
-    align-self:flex-start ;
-     background :#3D6185;
+}
 
-     display: flex;
-     justify-content:flex-end;
-     align-items: flex-end;
-     width: 100%;
-     margin-bottom: 30px;
+.bluebar {
+    margin: auto;
+    position: absolute;
+    align-self: flex-start;
+    background: #3D6185;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .spacer {
@@ -75,7 +76,7 @@ footer{
     gap: 32px;
 }
 
-.nav a{
+.nav a {
     text-decoration: none;
     font-size: 20pt;
     color: #707070;
@@ -118,6 +119,7 @@ footer{
     font-size: 16pt;
     color: #707070;
 }
+
 .eventDate-location {
     margin-top: -18px;
     font-size: 10pt;
@@ -144,7 +146,7 @@ footer{
     width: 100%;
 }
 
-.eventImageLinkContainer a{
+.eventImageLinkContainer a {
 
     font-family: "Segoe UI Semibold";
     text-decoration: none;
@@ -165,13 +167,14 @@ footer{
 
     border-radius: 0 0 0 3rem;
 }
+
 /* Slideshow */
 
 #slider {
     overflow: hidden;
 }
 
-#slider figure{
+#slider figure {
     position: relative;
     width: 500%;
     margin: 0;
@@ -179,73 +182,76 @@ footer{
     animation: 20s slider infinite;
 }
 
-#slider figure img{
+#slider figure img {
     width: 20%;
     float: left;
 }
 
-#slider{
+#slider {
     overflow: hidden;
 }
-#slider figure{
+
+#slider figure {
     position: relative;
     width: 500%;
     margin: 0;
     left: 0;
     animation: 20s slider infinite;
 }
-#slider figure img{
+
+#slider figure img {
     width: 20%;
     float: left;
 
 }
 
 @keyframes slider {
-    0%{
-        left:0;
+    0% {
+        left: 0;
     }
-    20%{
-        left:0;
+    20% {
+        left: 0;
     }
-    25%{
-        left:-100%
+    25% {
+        left: -100%
     }
-    45%{
+    45% {
         left: -100%;
     }
-    50%{
-        left:-200%;
+    50% {
+        left: -200%;
     }
-    70%{
-        left:-200%;
+    70% {
+        left: -200%;
     }
-    75%{
+    75% {
         left: -300%;
     }
-    95%{
+    95% {
         left: -300%;
     }
-    100%{
+    100% {
         left: -400%;
     }
 }
 
-.dots{
-    display:flex;
+.dots {
+    display: flex;
     justify-content: center;
     margin: 5px;
 }
-.dots label{
+
+.dots label {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border:solid #fff 3px;
-    cursor:pointer;
+    border: solid #fff 3px;
+    cursor: pointer;
     transition: 0.15s ease;
     margin: 5px;
 }
 
-.spotlightContainer{
+.spotlightContainer {
     background: #63B350;
     text-align: center;
     height: 30px;
