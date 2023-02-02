@@ -52,6 +52,7 @@ footer {
 
     height: 150px;
     margin: 16px;
+    padding: 4px;
 }
 
 .logo {
@@ -63,8 +64,11 @@ footer {
 .nav {
     grid-column: 2;
 
+    display: flex;
+    flex-direction: row;
+
     position: absolute;
-    top: 25%;
+    top: 35%;
     right: 5%;
     gap: 32px;
 }
