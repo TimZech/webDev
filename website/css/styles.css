@@ -25,14 +25,14 @@ h2 {
     color: #707070;
 }
 
-header {
-    position: relative;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+label {
+    color: #707070;
+    opacity: 75%;
+    margin: 4px;
+}
 
-    height: 200px;
+header {
+    background-color: white;
 }
 
 footer {
@@ -41,61 +41,103 @@ footer {
     height: 30px;
 }
 
+form input  {
+    border-radius: 0;
+    border-style:solid;
+    border-width: 1px;
+    border-color: #707070;
+}
+
+form section {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+}
+
+form section div {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Classes */
+
+.columnGrid {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    justify-content: center;
+}
 
 .bluebar {
     background: #3D6185;
     opacity: 80%;
 
-    position: relative;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    justify-content: end;
 
     width: 100%;
+
     height: 48px;
 }
 
-.pictogramContainer {
-    position: absolute;
+#darkModeButton {
+    display: inline-flex;
 
+    width: 24px;
+    height:24px;
+
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+#darkModeButton:hover {
+    -webkit-filter: brightness(50%);
+
+}
+
+.pictogramContainer {
+    grid-column: 2;
     display: flex;
-    bottom: 10%;
-    right: 5%;
-    gap: 16px;
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    margin: 12px;
+    gap: 24px;
+}
+
+.pictogramContainer a:hover {
+    -webkit-filter: brightness(75%);
 }
 
 .logoNavContainer {
-    justify-content: start;
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: 5% auto 5%;
 
-    max-width: 1664px;
     width: 100%;
-
-    margin: 16px;
-    padding: 4px;
+    padding-top: 16px;
+    margin-bottom: -16px;
 }
-
-
-.nav {
 
 .logo {
     grid-column: 2;
-    position: absolute;
-    left: 5%;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 398px;
 }
 
 .navContainer {
+    grid-column: 2/3;
+    width: auto;
 
-    grid-column: 2;
+    position: relative;
+    top:-210%;
+    justify-self: end;
 
-    display: flex;
+    display:flex;
     flex-direction: row;
-
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    gap: 32px;
+    column-gap: 32px;
 }
 
 .navContainer a {
@@ -117,21 +159,24 @@ footer {
     margin-top: 32px;
 }
 
+.rectangleDefault {
+    width: 100%;
+    height: 208px;
+    max-width: 351px;
+}
 /* Events */
 
-.columnGrid {
-    display: flex;
-    grid-template-columns: 5% auto 5%;
-    justify-content: center;
-}
+
 
 .eventList {
     display: flex;
     flex-wrap: wrap;
 
+    justify-self: center;
+
+    width: 100%;
     grid-column: 2;
-    grid-template-columns: 512px 512px 512px;
-    gap: 32px;
+    gap: 16px;
 }
 
 .eventContainer {
@@ -190,25 +235,20 @@ footer {
 
 .eventImage {
     float: right;
-
     margin: 0;
     padding: 0;
     height: 160px;
     width: 240px;
-
     border-radius: 0 0 0 3rem;
 }
 
 .eventButtons {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
-
-    max-width: 1664px;
-    width: 100%;
-    height: 64px;
-
     grid-column: 2;
+    justify-content: start;
+    height: 64px;
+    margin: 8px;
+    gap: 16px;
 }
 
 .eventCreate {
@@ -229,6 +269,128 @@ footer {
 
 .eventCreate:hover {
     background-color: #4D647A;
+}
+
+#eventCreator:not([open]) {
+    display: none;
+}
+
+#eventCreator[open] {
+    background-color: white;
+    width: 400px;
+    max-height: 816px;
+    padding: 0;
+
+    border-radius: 0 1.75rem 0 1.75rem;
+    border-color: whitesmoke;
+
+}
+
+.dateLocation {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+#eventCreator::backdrop {
+    background: aliceblue;
+    -webkit-filter: blur(1px);
+    opacity: 45%;
+}
+
+#creatorBar {
+    height: 40px;
+    background-color: #63809D;
+    color: white;
+}
+
+#creatorBar p {
+    position: absolute;
+    top:0;
+    margin: 8px;
+    font-family: "Segoe UI Semibold";
+}
+
+#formsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#formsContainer p{
+    display: flex;
+    flex-direction: column;
+}
+.eventLabel {
+    margin-left: 8px;
+}
+
+#eventName {
+    width: 343px;
+}
+
+#eventDate, #eventLocation, #eventAuthorName, #eventAuthorSurname {
+    width: 160px;
+}
+
+#eventDescription {
+    width: 343px;
+    height: 133px;
+}
+
+#eventPicture {
+    border: 0;
+
+    width: 343px;
+    height: 24px;
+}
+
+#eventPicture:hover {
+    -webkit-filter: brightness(85%);
+}
+
+#outputContainer {
+    grid-column: 1;
+
+    width: 351px;
+    height: 208px;
+
+    margin-left: 8px;
+
+    border: #707070;
+    opacity: 50%;
+}
+
+#output .image{
+    height: 208px;
+    width: 100%;
+
+    object-fit: cover;
+
+    overflow: hidden;
+    position: relative;
+}
+
+#output .image img{
+    height: 100%;
+    width: 100%;
+}
+
+#output .image span {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    cursor: pointer;
+    font-size: 22px;
+    color: white;
+}
+
+#output .image span:hover {
+    opacity: 0.8;
+}
+
+#output .span--hidden{
+    visibility: hidden;
 }
 
 /* Slideshow */
@@ -300,18 +462,21 @@ footer {
 }
 
 .spotlightContainer {
+    display: flex;
+    justify-content: center;
     background: #63B350;
     text-align: center;
 
+    position: relative;
     width: 100%;
+    top: 50%;
     height: 72px;
 }
 
-    height: 30px;
-}
 .navContainer a:hover{
-    font-family:"Segoe UI Semibold";
+    color: #3D3D3D;
 }
+
 .pictogramContainer:hover .image{
     opacity: 0.3;
 }
@@ -322,7 +487,6 @@ input{
 
 textarea{
     resize: none;
-
 }
 
 button{

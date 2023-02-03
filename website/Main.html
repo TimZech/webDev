@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         goodDeeds
     </title>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href=icon.png type="image/x-icon">
-    <script>
-    </script>
+    <script src="scripts/eventScripts.js"></script>
 </head>
 <header>
     <div class="bluebar">
-        <div class="pictogramContainer">
-            <a href="https://de-de.facebook.com/%22%3E"><img src="images/pictograms/facebook.png"></a>
-            <a href="https://instagram.com/%22%3E"><img src="images/pictograms/Instagram.png" alt=""></a>
-            <a href="https://twitter.com/%22%3E"><img src="images/pictograms/twitter.png" alt=""></a>
-        </div>
+        <ul class="pictogramContainer">
+            <li><a href="https://de-de.facebook.com/%22%3E"><img src="images/pictograms/facebook.png"></a></li>
+            <li><a href="https://instagram.com/%22%3E"><img src="images/pictograms/Instagram.png" alt=""></a></li>
+            <li><a href="https://twitter.com/%22%3E"><img src="images/pictograms/twitter.png" alt=""></a></li>
+        </ul>
     </div>
     <div class="logoNavContainer">
         <div class="logo">
             <img src="Logo.png" alt="">
         </div>
 
-        
-           <ul class="navContainer">
-            <li><a href="main.html">Home</a></li>
-            <li><a href="Events.html">Events</a></li>
-            <li><a href="Kontakte.html">Kontakte</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="ÜberUns.html">Über uns</a></li>
-        </ul>
-   
+        <div class="navContainer">
+            <a href="main.html">Home</a>
+            <a href="Events.html">Events</a>
+            <a href="Kontakte.html">Kontakte</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="ÜberUns.html">Über uns</a>
+            <input type="image" src="images/icons/lightbulb.png" id="darkModeButton">
+        </div>
     </div>
-
 </header>
-
 <body>
+
 <div id="slider">
     <figure>
         <img src="images/slider/ausgabe-compressed.jpg" class="b1"
@@ -51,10 +49,14 @@
              alt="https://www.pexels.com/de-de/foto/menschen-freunde-lacheln-spenden-6995109/">
     </figure>
 </div>
-
 <div class="spotlightContainer">
     <a href="Events.html"> //Spotlight -> Akutelle Videolinks etx. können hier gezeigt werden </a>
 </div>
-</body>
 
+
+<div class="pageHeadline">
+    <h1>Aktuelle Events</h1>
+</div>
+
+</body>
 </html>

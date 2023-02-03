@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         goodDeeds
     </title>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href=icon.png type="image/x-icon">
-    <script>
-    </script>
+    <script src="scripts/eventScripts.js"></script>
 </head>
 <header>
     <div class="bluebar">
-        <div class="pictogramContainer">
-            <a href="https://de-de.facebook.com/%22%3E"><img src="images/pictograms/facebook.png"></a>
-            <a href="https://instagram.com/%22%3E"><img src="images/pictograms/Instagram.png" alt=""></a>
-            <a href="https://twitter.com/%22%3E"><img src="images/pictograms/twitter.png" alt=""></a>
+        <ul class="pictogramContainer">
+            <li><a href="https://de-de.facebook.com/%22%3E"><img src="images/pictograms/facebook.png"></a></li>
+            <li><a href="https://instagram.com/%22%3E"><img src="images/pictograms/Instagram.png" alt=""></a></li>
+            <li><a href="https://twitter.com/%22%3E"><img src="images/pictograms/twitter.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="logoNavContainer">
+        <div class="logo">
+            <img src="Logo.png" alt="">
+        </div>
+
+        <div class="navContainer">
+            <a href="main.html">Home</a>
+            <a href="Events.html">Events</a>
+            <a href="Kontakte.html">Kontakte</a>
+            <a href="FAQ.html">FAQ</a>
+            <a href="ÜberUns.html">Über uns</a>
+            <input type="image" src="images/icons/lightbulb.png" id="darkModeButton">
         </div>
     </div>
-    <div class="columnGrid">
-        <div class="logoNavContainer">
-            <div class="logo">
-                <img src="Logo.png" alt="">
-            </div>
-
-            <div class="nav">
-                <a href="main.html">Home</a>
-                <a href="Events.html">Events</a>
-                <a href="Kontakte.html">Kontakte</a>
-                <a href="FAQ.html">FAQ</a>
-                <a href="ÜberUns.html">Über uns</a>
-            </div>
-        </div>
-    </div>
-
 </header>
 <body>
 
@@ -57,14 +55,11 @@
 </div>
 
 <div class="columnGrid">
-    <ul class="eventButtons">
-        <button class="eventCreate" type="button">NEUES EVENT</button>
-    </ul>
-</div>
-
-<div class="columnGrid">
-    <ul class="eventList">
-        <li class="eventContainer" id="event-id">
+    <div class="eventButtons">
+        <button id="open-eventCreator" class="eventCreate" type="button">NEUES EVENT</button>
+    </div>
+    <ul class="eventList" id="eList">
+        <li class="eventContainer">
             <div class="eventTextContainer">
                 <div class="eventHeadline"><h2>Event Headline</h2></div>
                 <div class="eventDate-location">DD.Month.Year, Location</div>
@@ -79,7 +74,7 @@
                 <a href="">ZUM EVENT</a>
             </div>
         </li>
-        <li class="eventContainer" id="event-id2">
+        <li class="eventContainer">
             <div class="eventTextContainer">
                 <div class="eventHeadline"><h2>Event Headline</h2></div>
                 <div class="eventDate-location" a>DD.Month.Year, Location</div>
@@ -91,21 +86,80 @@
             </div>
             <div class="eventImageLinkContainer"></div>
         </li>
-        <li>
-            <div class="eventContainer" id="event-id3">
-                <div class="eventTextContainer">
-                    <div class="eventHeadline"><h2>Event Headline</h2></div>
-                    <div class="eventDate-location">D.Month.Year, Location</div>
-                    <div class="eventText"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                        est Lorem ipsum dolor sit amet.</p>
-                    </div>
+        <li class="eventContainer">
+            <div class="eventTextContainer">
+                <div class="eventHeadline"><h2>Event Headline</h2></div>
+                <div class="eventDate-location">D.Month.Year, Location</div>
+                <div class="eventText"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                    et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                    est Lorem ipsum dolor sit amet.</p>
                 </div>
-                <div class="eventImageLinkContainer"></div>
             </div>
+            <div class="eventImageLinkContainer"></div>
         </li>
     </ul>
 </div>
+<dialog id="eventCreator">
+    <div id="creatorBar"><p>NEUES EVENT ERSTELLEN</p></div>
+    <div id="formsContainer">
+        <form id="eventNew" style="margin-left:16px ">
+            <section>
+                <label for="eventName" class="eventLabel">Eventname*:</label>
+            </section>
+            <input id="eventName" type="text" style="color: #707070; opacity: 75%; margin: 8px">
+            <section>
+                <div style="grid-column: 1">
+                    <label for="eventDate" class="eventLabel">Datum*:</label>
+                    <input id="eventDate" type="date" style="color: #707070; opacity: 75%; margin: 8px" required>
+                </div>
+                <div style="grid-column: 2">
+                    <label for="eventLocation" class="eventLabel">Ort*:</label>
+                    <input id="eventLocation" type="text" style="color: #707070; opacity: 75%; margin: 8px" required>
+                </div>
+            </section>
+            <section>
+                <div style="grid-column: 1">
+                    <label for="eventDescription" class="eventLabel">Event Beschreibung:</label>
+                    <textarea id="eventDescription" type="text"
+                              style="color: #707070; opacity: 75%; margin: 8px"></textarea>
+                </div>
+            </section>
+            <section>
+                <div style="grid-column: 1">
+                    <label for="eventPicture" class="eventLabel">Bild Upload:</label>
+                    <input id="eventPicture" type="file" accept="image/jpeg, image/jpg, image/png"
+                           style="color: #707070; opacity: 75%; margin: 8px">
+                </div>
+            </section>
+            <!-- Bild Upload -->
+
+            <div id="outputContainer">
+                <output id="output"><img class="rectangleDefault" src="images/defaults/default-placeholder.png">
+                </output>
+            </div>
+
+            <div>
+                <br>
+            </div>
+
+            <section>
+                <div style="grid-column: 1">
+                    <label for="eventAuthorName" class="eventLabel">Vorname*:</label>
+                    <input id="eventAuthorName" type="text" style="color: #707070; opacity: 75%; margin: 8px" required>
+                </div>
+                <div style="grid-column: 2">
+                    <label for="eventAuthorSurname" class="eventLabel">Nachname*:</label>
+                    <input id="eventAuthorSurname" type="text" style="color: #707070; opacity: 75%; margin: 8px"
+                           required>
+                </div>
+            </section>
+            <div class="eventButtons">
+                <button id="createEvent" class="eventCreate" type="button">Erstellen</button>
+                <button id="close-eventCreator" class="eventCreate" type="button">Abbrechen</button>
+            </div>
+        </form>
+    </div>
+</dialog>
 </body>
 </html>
